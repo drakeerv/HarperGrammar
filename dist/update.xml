@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<description xmlns="http://openoffice.org/extensions/description/2006" xmlns:dep="http://openoffice.org/extensions/description/2006" xmlns:l="http://libreoffice.org/extensions/description/2011" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <identifier value="org.openoffice.extensions.ooopip"/>
+  <version value="1.3.1"/>
+  <dependencies>
+    <l:LibreOffice-minimal-version value="7.0"/>
+  </dependencies>
+  <update-download>
+    <src xlink:href="https://raw.githubusercontent.com/drakeerv/HarperGrammar/main/dist/HarperGrammar.oxt"/>
+  </update-download>
+  <publisher>
+    <name xlink:href="https://github.com/drakeerv/HarperGrammar" lang="en">drakeerv</name>
+    <name xlink:href="https://github.com/drakeerv/HarperGrammar/fr" lang="fr">AmourEsprit</name>
+  </publisher>
+</description>
