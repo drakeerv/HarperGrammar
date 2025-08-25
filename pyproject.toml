@@ -1,0 +1,242 @@
+# See: https://github.com/Amourspirit/python-libreoffice-pip/wiki/pyproject.toml
+[tool.oxt.config]
+auto_install_in_site_packages = true # https://tinyurl.com/ymeh4c9j#auto_install_in_site_packages
+build_dir = "build" # https://tinyurl.com/ymeh4c9j#build_dir
+dist_dir = "tmp_dist" # https://tinyurl.com/ymeh4c9j#dist_dir should be changed to someting like dist, tmp_dist is not included in git
+install_wheel = true # https://tinyurl.com/ymeh4c9j#install_wheel
+oxt_name = "OooPip" # https://tinyurl.com/ymeh4c9j#oxt_name
+py_pkg_dir = "py_pkgs" # https://tinyurl.com/ymeh4c9j#py_pkg_dir
+py_pkg_files = [] # https://tinyurl.com/ymeh4c9j#py_pkg_files
+py_pkg_names = [] # ["ooodev", "ooo"] https://tinyurl.com/ymeh4c9j#py_pkg_names
+token_file_ext = ["txt", "xml", "xcu", "xcs", "py","components", "json"] # https://tinyurl.com/ymeh4c9j#token_file_ext
+update_file = "update.xml" # https://tinyurl.com/ymeh4c9j#update_file
+zip_preinstall_pure = true # https://tinyurl.com/ymeh4c9j#zip_preinstall_pure
+window_timeout = 5 # https://tinyurl.com/ymeh4c9j#window_timeout number of seconds to wait for window to appear
+dialog_desktop_owned = false # https://tinyurl.com/ymeh4c9j#dialog_desktop_owned determines if the dialog is owned by the desktop window
+resource_dir_name = "resources" # https://tinyurl.com/ymeh4c9j#resource_dir_name
+resource_properties_prefix = "pipstrings" # https://tinyurl.com/ymeh4c9j#resource_properties_prefix
+default_locale = ["en", "US"] # https://tinyurl.com/ymeh4c9j#default_locale
+sym_link_cpython = true # https://tinyurl.com/ymeh4c9j#sym_link_cpython
+uninstall_on_update = true # https://tinyurl.com/ymeh4c9j#uninstall_on_update uninstall previous python packages on update
+install_on_no_uninstall_permission = true # https://tinyurl.com/ymeh4c9j#install_on_no_uninstall_permission
+oo_types_uno = "/usr/lib/libreoffice/program/types.rdb" # https://tinyurl.com/ymeh4c9j#oo_types_uno
+oo_types_office = "/usr/lib/libreoffice/program/types/offapi.rdb" # https://tinyurl.com/ymeh4c9j#oo_types_office
+run_imports = [] # ["ooodev", "verr", "sortedcontainers"] https://tinyurl.com/ymeh4c9j#run_imports
+run_imports_linux = [] # https://tinyurl.com/ymeh4c9j#run_imports_linux
+run_imports_macos = [] # https://tinyurl.com/ymeh4c9j#run_imports_macos
+run_imports_win = [] # https://tinyurl.com/ymeh4c9j#run_imports_win
+tokes_files = [] # ["python_impl.py"] https://tinyurl.com/ymeh4c9j#tokes_files
+no_pip_remove = ["pip", "setuptools", "wheel"] # https://tinyurl.com/ymeh4c9j#no_pip_remove
+require_install_name_match = false # https://tinyurl.com/ymeh4c9j#require_install_name_match
+unload_after_install = true # https://tinyurl.com/ymeh4c9j#unload_after_install
+cmd_clean_file_enabled = true # https://tinyurl.com/ymeh4c9j#cmd_clean_file_enabled
+cmd_clean_file_prefix = "cleanup_" # https://tinyurl.com/ymeh4c9j#cmd_clean_file_prefix
+pip_shared_dirs = ["bin", "lib", "include", "inc", "docs", "config"] # https://tinyurl.com/ymeh4c9j#pip_shared_dirs
+
+[tool.oxt.token]
+# in the form of "token_name": "token_value"
+# in the files the token will have a prefix and suffix of ___
+pip_wheel_url = "https://files.pythonhosted.org/packages/ef/7d/500c9ad20238fcfcb4cb9243eede163594d7020ce87bd9610c9e02771876/pip-24.3.1-py3-none-any.whl" # https://tinyurl.com/ymeh4c9j#pip_wheel_url
+test_internet_url = "https://duckduckgo.com" # https://tinyurl.com/ymeh4c9j#test_internet_url
+log_pip_installs = false # https://tinyurl.com/ymeh4c9j#log_pip_installs
+lo_identifier = "org.openoffice.extensions.ooopip" # https://tinyurl.com/ymeh4c9j#lo_identifier
+lo_implementation_name = "OooPipRunner" # https://tinyurl.com/ymeh4c9j#lo_implementation_name
+display_name = "LibreOffice Python Pip Template" # https://tinyurl.com/ymeh4c9j#display_name
+description = "Template for creating pip based extensions for for LibreOffice" # https://tinyurl.com/ymeh4c9j#description
+publisher = "AmourSpirit" # https://tinyurl.com/ymeh4c9j#publisher
+publisher_url = "https://github.com/Amourspirit/python-libreoffice-pip" # https://tinyurl.com/ymeh4c9j#publisher_url
+update_url_xml = "https://raw.githubusercontent.com/Amourspirit/python-libreoffice-pip/main/___dist_dir___/___update_file___" # https://tinyurl.com/ymeh4c9j#update_url_xml
+update_url_oxt = "https://raw.githubusercontent.com/Amourspirit/python-libreoffice-pip/main/___dist_dir___/___oxt_name___.oxt" # https://tinyurl.com/ymeh4c9j#update_url_oxt
+url_pip = 'https://bootstrap.pypa.io/get-pip.py' # https://tinyurl.com/ymeh4c9j#url_pip
+# set log_file to "" to disable logging
+log_file = "pip_install.log" # https://tinyurl.com/ymeh4c9j#log_file
+log_name = "OOO PIP Installer" # https://tinyurl.com/ymeh4c9j#log_name
+log_level = "DEBUG" # NONE, DEBUG, INFO, WARNING, ERROR, CRITICAL https://tinyurl.com/ymeh4c9j#log_level
+log_format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s" # https://tinyurl.com/ymeh4c9j#log_format
+log_add_console = false # should be false for production # https://tinyurl.com/ymeh4c9j#log_add_console
+lo_pip = "lo_pip" # https://tinyurl.com/ymeh4c9j#lo_pip
+platform = "all" # https://tinyurl.com/ymeh4c9j#platform
+startup_event = "OnStartApp" # OnStartApp or onFirstVisibleTask https://tinyurl.com/ymeh4c9j#startup_event
+show_progress = true # https://tinyurl.com/ymeh4c9j#show_progress
+delay_startup = true # determines if installing waits fo the window to load before installing https://tinyurl.com/ymeh4c9j#delay_startup
+libreoffice_debug_port = 5678
+
+[tool.oxt.requirements]
+# https://tinyurl.com/ymeh4c9j#tooloxtrequirements
+# https://python-poetry.org/docs/dependency-specification/
+# general requirements that are always installed.
+# If the requirements are platform specific, use the platform specific sections below
+# If the requirement is added here and in the platform specific section, the platform specific section takes precedence
+typing-extensions = ">=4.12.2"
+debugpy = ">=1.8"
+
+[[tool.oxt.py_packages]]
+# https://tinyurl.com/ymeh4c9j#tooloxtpy_packages
+# https://amour_spirit.pyscriptapps.com/version-runner/latest/py_packages.html
+name="verr"
+version="1.1.2"
+platforms=["all"]
+# ignore_platforms=["flatpak", "snap"]
+
+[[tool.oxt.py_packages]]
+name="pacote-hello-world"
+version="0.0.1"
+restriction="=="
+platforms=["linux"]
+python_versions=[">=3.12"]
+
+
+[tool.oxt.isolate]
+# https://tinyurl.com/ymeh4c9j#tooloxtisolate
+windows = [] # ["odfpy"]
+
+[tool.oxt.preinstall.pure]
+# https://tinyurl.com/ymeh4c9j#tooloxtpreinstallpure
+# verr = ">=1.1.2"
+
+[tool.oxt.locale.publisher]
+# https://tinyurl.com/ymeh4c9j#tooloxtlocalepublisher
+en = { name = "___publisher___", url="___publisher_url___" }
+fr = { name = "AmourEsprit", url="___publisher_url___/fr" }
+
+[tool.oxt.locale.name]
+# https://tinyurl.com/ymeh4c9j#tooloxtlocalename
+en = "___display_name___"
+fr = "Modèle LibreOffice Python Pip"
+de = "LibreOffice Python Pip Vorlage"
+pt = "Modelo LibreOffice Python Pip"
+es = "Plantilla LibreOffice Python Pip"
+
+[tool.oxt.locale.desc]
+# https://tinyurl.com/ymeh4c9j#tooloxtlocaledesc
+en = "___description___"
+fr = "Modèle pour créer des extensions basées sur pip pour LibreOffice"
+de = "Vorlage zum Erstellen von pip-basierten Erweiterungen für LibreOffice"
+pt = "Modelo para criar extensões baseadas em pip para o LibreOffice"
+es = "Plantilla para crear extensiones basadas en pip para LibreOffice"
+
+[tool.oxt.bz2.32_bit]
+"3.8" = { url = "https://www.python.org/ftp/python/3.8.10/python-3.8.10-embed-win32.zip", md5="659adf421e90fba0f56a9631f79e70fb" }
+"3.9" = { url = "https://www.python.org/ftp/python/3.9.13/python-3.9.13-embed-win32.zip", md5="fec0bc06857502a56dd1aeaea6488ef8" }
+"3.10" = { url = "https://www.python.org/ftp/python/3.10.11/python-3.10.11-embed-win32.zip", md5="fee70dae06c25c60cbe825d6a1bfda57" }
+"3.11" = { url = "https://www.python.org/ftp/python/3.11.6/python-3.11.6-embed-win32.zip", md5="d035d12d72e2d62b6e5219ea8f3bda39" }
+"3.12" = { url = "https://www.python.org/ftp/python/3.12.7/python-3.12.7-embed-win32.zip", md5="21a051ecac4a9a25fab169793ecb6e56" }
+"3.13" = { url = "https://www.python.org/ftp/python/3.13.0/python-3.13.0rc3-embed-win32.zip", md5="02d47e6085ae8921d83fe937ec2c6590" }
+
+[tool.oxt.bz2.64_bit]
+"3.8" = { url = "https://www.python.org/ftp/python/3.8.10/python-3.8.10-embed-amd64.zip", md5="3acb1d7d9bde5a79f840167b166bb633" }
+"3.9" = { url = "https://www.python.org/ftp/python/3.9.13/python-3.9.13-embed-amd64.zip", md5="57731cf80b1c429a0be7133266d7d7cf" }
+"3.10" = { url = "https://www.python.org/ftp/python/3.10.11/python-3.10.11-embed-amd64.zip", md5="f1c0538b060e03cbb697ab3581cb73bc" }
+"3.11" = { url = "https://www.python.org/ftp/python/3.11.6/python-3.11.6-embed-amd64.zip", md5="ff5f34b8d2504c49fc94ffc29998b8a0" }
+"3.12" = { url = "https://www.python.org/ftp/python/3.12.7/python-3.12.7-embed-amd64.zip", md5="4c0a5a44d4ca1d0bc76fe08ea8b76adc" }
+"3.13" = { url = "https://www.python.org/ftp/python/3.13.0/python-3.13.0rc3-embed-amd64.zip", md5="93d8329cd1c8d09f64c28191942c11ce" }
+
+
+[project]
+name = "libreoffice_pip_template"
+version = "1.3.1"
+description = "Template for creating pip based extensions for for LibreOffice"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = ["pip", "libreoffice","uno", "pyuno"]
+dependencies = [
+    "ooouno>=3.0.0",
+    "toml>=0.10.2",
+    "typing-extensions>=0.10.2",
+]
+authors = [
+    {name = ":Barry-Thomas-Paul: Moss", email = "libreofficepip.kitchen756@passmail.net"}]
+
+
+[dependency-groups]
+dev = [
+    "types-scriptforge>=2.0.1",
+    "lxml>=5.3.0",
+    "ooo-dev-tools>=0.50.0",
+    "packaging>=24.2",
+    "oooscript>=1.1.4",
+    "pytest-mock>=3.14.0",
+    "pytest>=8.3.4",
+    "pytest-dotenv>=0.5.2",
+    "ruff>=0.8.4",
+    "toml>=0.10.2",
+    "typing-extensions>=4.12.2",
+    "oooenv>=0.2.4",
+]
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+include = [
+    "build/**/*",
+]
+
+
+[tool.pylint.'MESSAGES CONTROL']
+max-line-length = 120
+disable = """
+    no-name-in-module,
+    no-self-argument
+"""
+
+[tool.pyright]
+include = ["src"]
+reportMissingModuleSource = false
+
+[tool.ruff]
+# https://docs.astral.sh/ruff/configuration/
+
+ignore = ["E501"]
+show-fixes = true
+target-version = "py38"
+line-length = 119
+
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    "__pypackages__",
+    "build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    ".venv",
+    "tmp",
+]
+src = ["otx", "src"]
+
+
+[tool.ruff.lint]
+select = ["ANN", "C4", "N", "SIM"]
+ignore = []
+
+[tool.ruff.format]
+exclude = ["tmp", ".devcontainer", ".githooks", ".github", ".hypothesis", ".idea", ".pytest_cache", ".venv", ".vscode", "cmds", "dist", "docs", "*.pyi"]
+
+[tool.ruff.lint.pylint]
+max-args = 10
+max-returns = 10
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+markers = [
+    "skip_headless: skips a test in headless mode",
+    "skip_not_headless_os: skips a test in GUI mode for give os",
+]
